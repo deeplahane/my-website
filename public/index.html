@@ -967,7 +967,8 @@
         align-items: center;
       }
       .right form .button-area button {
-        color: crimson;
+        color: white;
+        background-color: crimson;
         display: block;
         width: 160px !important;
         height: 45px;
@@ -981,15 +982,15 @@
         transition: all 0.3s ease-in-out;
       }
       .right form .button-area button:hover {
-        color: white;
-        background: crimson;
+        color: crimson;
+        background: white;
       }
       /* footer section styling */
 
       footer {
         position: relative;
         width: 100%;
-        background: #3586ff;
+        background: black;
         min-height: 100px;
         padding: 20px 50px;
         display: flex;
@@ -1069,6 +1070,7 @@
         transform: rotateX(10px);
       }
       footer .wave {
+        color: #000;
         position: absolute;
         top: -100px;
         left: 0;
@@ -1078,12 +1080,14 @@
         background-size: 1000px 100px;
       }
       footer .wave#wave1 {
+        color: #000;
         z-index: 1000;
         opacity: 1;
         bottom: 0;
         animation: animatewave 4s linear infinite;
       }
       footer .wave#wave2 {
+        color: #000;
         z-index: 999;
         opacity: 0.5;
         bottom: 10px;
@@ -1290,20 +1294,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+   
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    
     <title>React App</title>
   </head>
   <body>
@@ -1337,7 +1330,7 @@
           <div class="text-3">And I'm a</div>
           <div class="text-3"><span class="typing"></span></div>
           <div class="classbox">
-            <a href="#">Hire me</a>
+            <a href="mailto:deeplahane15@gmail.com" target="_blank">Hire me</a>
           </div>
         </div>
         <div class="div_margin">
@@ -1572,7 +1565,7 @@
         <div class="carousel owl-carousel">
           <div class="card">
             <div class="box">
-              <img src="images/project images/project_img1.png" />
+              <img src="images/project images/project_img1.jpg" />
               <div class="text">TESTIMONIALS API</div>
               <p>
                 Tired of copy and pasting lorem user's testimonial text which
@@ -1626,7 +1619,7 @@
               </p>
               <a
                 href="https://semperblinds.com/"
-                class="project1"
+                class="project"
                 target="_blank"
                 >Live preview</a
               >
@@ -1634,14 +1627,52 @@
           </div>
           <div class="card">
             <div class="box">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="img"
-              />
-              <div class="text">NRD Computers</div>
-              <p>NRD Computer is an eCommerce project.</p>
-              <a href="https://nrd.com.np/" class="project" target="_blank"
-                >View Project</a
+              <img src="images/project images/project_img4.jpg" />
+              <div class="text">DREAM SHELTER</div>
+              <p>
+                It is a social media platform for all the Abroad-Studing
+                Aspirants to engage with each other an form a comunity to help
+                each other.
+              </p>
+              <a
+                href="https://semperblinds.com/"
+                class="project1"
+                target="_blank"
+              >
+                Source Code</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <img src="images/project images/project_img5.jpg" />
+              <div class="text">WEATHER STATUS</div>
+              <p>
+                It is a website which gives all weather information about any
+                location on the planet with pin-point accuracy using an API.
+              </p>
+              <a
+                href="https://semperblinds.com/"
+                class="project1"
+                target="_blank"
+              >
+                Source Code</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <img src="images/project images/project_img6.jpg" />
+              <div class="text">QUOTES GERERATIOR</div>
+              <p>
+                This website fetches random quotes from an API and redirects you
+                to your twitter handle to tweet the quotes of your choice.
+              </p>
+              <a
+                href="https://semperblinds.com/"
+                class="project1"
+                target="_blank"
+                >Source Code</a
               >
             </div>
           </div>
@@ -1657,31 +1688,30 @@
           <div class="column left">
             <div class="text">Get in Touch</div>
             <p>
-              If you are interested in working together? Please fill out the
-              form aside with some info about your project and I will get back
-              to you as soon as I can. Please allow a couple days for me to
-              respond.
+              If you are interested in working together, hiring me, or any
+              queries, Please fill out the form and I will get back to you as
+              soon as I can. Please allow a couple days for me to respond.👋
             </p>
             <div class="icons">
               <div class="row">
                 <i class="fas fa-user"></i>
                 <div class="info">
                   <div class="head">Name</div>
-                  <div class="sub-title">Hem Bahadur Pun</div>
+                  <div class="sub-title">Deep Manohar Lahane</div>
                 </div>
               </div>
               <div class="row">
                 <i class="fas fa-map-marker-alt"></i>
                 <div class="info">
                   <div class="head">Address</div>
-                  <div class="sub-title">Pokhara, Nepal</div>
+                  <div class="sub-title">Mumbai, India</div>
                 </div>
               </div>
               <div class="row">
                 <i class="fas fa-envelope"></i>
                 <div class="info">
                   <div class="head">Email</div>
-                  <div class="sub-title">mail@gmail.com</div>
+                  <div class="sub-title">deeplahane15@gmail.com</div>
                 </div>
               </div>
             </div>
@@ -1724,46 +1754,49 @@
         <div class="wave" id="wave1"></div>
         <div class="wave" id="wave2"></div>
         <div class="wave" id="wave3"></div>
-        <div class="wave" id="wave4"></div>
+        <!-- <div class="wave" id="wave4"></div> -->
       </div>
       <h2><span class="typing-3"></span></h2>
       <ul id="media">
-        <!-- facebook  -->
-        <li style="--clr: #0011ff">
-          <a href="https://www.facebook.com/heemal.himalpun" target="-blank"
-            ><i class="fa-brands fa-facebook-f"></i>
+        <!-- github  -->
+        <li style="--clr: #000000">
+          <a href="https://github.com/deeplahane" target="-blank"
+            ><i class="fa-brands fa-github"></i>
           </a>
         </li>
-        <!-- youtube  -->
-        <li style="--clr: #ff0000">
-          <a
-            href="https://www.youtube.com/channel/UC1ryLxQzkWeFtply1F1kxwA "
-            target="-blank"
-            ><i class="fa-brands fa-youtube"></i
+        <!-- linkedin  -->
+        <li style="--clr: #0b5394">
+          <a href="https://www.linkedin.com/in/deeplahane" target="-blank"
+            ><i class="fa-brands fa-linkedin"></i
           ></a>
         </li>
-        <!-- Twitter  -->
-        <li style="--clr: #4506f0">
-          <a href="https://twitter.com/HimalPu94127169" target="-blank"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
+        <!-- Fiverr  -->
+        <li style="--clr: #3cc700">
+          <a href="https://www.fiverr.com/deep_lahane" target="-blank">
+            <img style="height: 37px; width: 37px; padding-bottom: 0px;" src="fiverr_icon.png" />
+          </a>
         </li>
         <!-- Instagram  -->
-        <li style="--clr: #e73f0c">
-          <a href="https://www.instagram.com/smokuspoon" target="-blank"
+        <li style="--clr: #ee3355">
+          <a href="https://www.instagram.com/deep_lahane_" target="-blank"
             ><i class="fa-brands fa-instagram"></i
           ></a>
         </li>
-        <!-- whatsapp  -->
-        <li style="--clr: #04c214">
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <!-- E-mail  -->
+        <li style="--clr: #ffffff">
+          <a href="mailto:deeplahane15@gmail.com" target="-blank"><i class="fas fa-envelope"></i></a>
+        </li>
+        <!-- twitter -->
+        <li style="--clr: #00d8ff">
+          <a href="https://twitter.com/LahaneDeep" target="-blank"
+            ><i class="fa-brands fa-twitter "></i
+          ></a>
         </li>
       </ul>
 
       <p>
-        &copy; 2021
-        <a href="https://hembdrpun.com.np/" target="_blank">Hem</a> | All Rights
-        Reserved |
+        Made with ❤️ by Deep Lahane | Copyright &copy; 2022 | All Rights
+        Reserved
       </p>
     </footer>
     <script
@@ -1846,7 +1879,7 @@
           loop: true,
         });
         var typed = new Typed(".typing-3", {
-          strings: ["Connect with me on :)"],
+          strings: ["Connect with me on"],
           typeSpeed: 100,
           backSpeed: 60,
           loop: true,
