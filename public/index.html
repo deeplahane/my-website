@@ -218,7 +218,7 @@
         margin: 5px 0;
       }
       .home .home-content .text-3 span {
-        color: #ed09a8;
+        color: crimson;
         font-weight: 500;
       }
       .classbox {
@@ -247,8 +247,9 @@
         content: "";
         position: absolute;
         inset: 4px;
-        /* background: #0e1538; */
-        background: #ed09a8;
+        /* background: #0e1538 z; */
+        background: crimson;
+        /* background: #ed09a8; */
         border-radius: 20px;
       }
       @keyframes animate-rotate {
@@ -334,7 +335,7 @@
       .services .title::after,
       .teams .title::after {
         background: #111;
-        content: "what i provide";
+        content: "what I provide";
       }
 
       .container {
@@ -846,21 +847,45 @@
       .owl-dot:hover {
         background: crimson !important;
       }
-      .teams .carousel .card .box .project {
+      .teams .carousel .card .project1 {
         display: inline-block;
-        color: crimson;
-        font-size: 18px;
-        font-weight: 500;
-        padding: 8px 16px;
+        color: white;
+        background-color: crimson;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 8px 8px;
         margin-top: 20px;
         border-radius: 6px;
         border: 2px solid crimson;
         transition: 0.3s ease-in-out;
       }
-      .teams .carousel .card .box .project:hover {
+      .teams .carousel .card .project1:hover {
+        color: crimson;
+        background: #2222;
+      }
+
+      .teams .carousel .card .project {
+        display: inline-block;
+        color: crimson;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 8px 8px;
+        margin-top: 20px;
+        border-radius: 6px;
+        border: 2px solid crimson;
+        transition: 0.3s ease-in-out;
+      }
+      .teams .carousel .card .project:hover {
         color: white;
         background: crimson;
       }
+
+      .apply_flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
       /* contact section styling */
       input,
       textarea {
@@ -1547,46 +1572,63 @@
         <div class="carousel owl-carousel">
           <div class="card">
             <div class="box">
-              <img
-                src="https://images.pexels.com/photos/1108117/pexels-photo-1108117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="img"
-              />
-              <div class="text">SJS Hot N' Spicy</div>
-              <p>SJS hot n spicy is and resturant project .</p>
+              <img src="images/project images/project_img1.png" />
+              <div class="text">TESTIMONIALS API</div>
+              <p>
+                Tired of copy and pasting lorem user's testimonial text which
+                doesn't give the feel of authenticity try testimonial API.
+              </p>
+            </div>
+            <div class="apply_flex">
               <a
-                href="https://apps.pfcrestaurant.com.np/"
+                href="https://github.com/deeplahane/Get-Testimonial-API"
+                class="project1"
+                target="_blank"
+                >Source code</a
+              ><a
+                href="https://gettestimonials.herokuapp.com/"
                 class="project"
                 target="_blank"
-                >View Project</a
+                >Live Preview</a
               >
             </div>
           </div>
           <div class="card">
             <div class="box">
-              <img
-                src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="img"
-              />
-              <div class="text">Buger House</div>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <a href="https://ajyotish.com.np/" class="project" target="_blank"
-                >View project</a
+              <img src="images/project images/project_img3.png" />
+              <div class="text">EXPENSE TRACKER</div>
+              <p>
+                This projects conatains 3 sections Personal, Business, Room
+                rents. This project also having a user authentiation.
+              </p>
+            </div>
+            <div class="apply_flex">
+              <a
+                href="https://github.com/deeplahane/Expense-Tracker"
+                class="project1"
+                target="_blank"
+                >Source code</a
+              ><a
+                href="https://all-expense-tracker.vercel.app/login/"
+                class="project"
+                target="_blank"
+                >Live Preview</a
               >
             </div>
           </div>
           <div class="card">
             <div class="box">
-              <img
-                src="https://images.pexels.com/photos/1804577/pexels-photo-1804577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="img"
-              />
-              <div class="text">Deep IT Institute</div>
-              <p>Deep Computer is an institution project .</p>
+              <img src="images/project images/project_img2.png" />
+              <div class="text">SEMPER BLINDS</div>
+              <p>
+                Semper Blinds based basically a blinds store based in North East
+                Manchester having over 35 years of experience.
+              </p>
               <a
-                href="https://deepcomputer.edu.np/"
-                class="project"
+                href="https://semperblinds.com/"
+                class="project1"
                 target="_blank"
-                >View Project</a
+                >Live preview</a
               >
             </div>
           </div>
