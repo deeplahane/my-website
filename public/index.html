@@ -34,8 +34,9 @@
 
       /* all similar content styling codes */
       section {
-        padding: 100px 0;
+        padding: 50px 0;
       }
+
       .max-width {
         max-width: 1300px;
         padding: 0 80px;
@@ -63,7 +64,7 @@
         text-align: center;
         font-size: 40px;
         font-weight: 500;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         padding-bottom: 20px;
         font-family: "Ubuntu", sans-serif;
       }
@@ -74,7 +75,7 @@
         left: 50%;
         width: 180px;
         height: 3px;
-        background: #111;
+        background: #111111;
         transform: translateX(-50%);
       }
       section .title::after {
@@ -93,13 +94,13 @@
         position: fixed;
         width: 100%;
         z-index: 999;
-        padding: 30px 0;
+        padding: 20px 0;
         font-family: "Ubuntu", sans-serif;
         transition: all 0.3s ease;
       }
       .navbar.sticky {
-        padding: 15px 0;
-        background: crimson;
+        padding: 12px 0;
+        background: #111111;
       }
       .navbar .max-width {
         display: flex;
@@ -108,7 +109,7 @@
       }
       .navbar .logo a {
         color: #fff;
-        font-size: 35px;
+        font-size: 20px;
         font-weight: 600;
         cursor: pointer;
       }
@@ -116,9 +117,7 @@
         color: crimson;
         transition: all 0.3s ease;
       }
-      .navbar.sticky .logo a span {
-        color: #fff;
-      }
+
       .navbar .menu li {
         list-style: none;
         display: inline-block;
@@ -126,7 +125,7 @@
       .navbar .menu li a {
         display: block;
         color: #fff;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 500;
         margin-left: 25px;
         transition: color 0.3s ease;
@@ -134,10 +133,34 @@
       .navbar .menu li a:hover {
         color: crimson;
         cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+        /* transition: color 0.3s ease; */
       }
+
       .navbar.sticky .menu li a:hover {
-        color: #fff;
+        color: crimson;
         cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+        /* transition: color 0.3s ease; */
+      }
+
+      .logo .linkOne img {
+        height: 40px;
+        width: 40px;
+      }
+      .logo .linkOne:hover img {
+        height: 40px;
+        width: 40px;
+        color: white;
+      }
+
+      .navbar .logo ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       /* menu btn styling */
@@ -199,6 +222,7 @@
         font-family: "Ubuntu", sans-serif;
       }
       .home .max-width {
+        margin-top: 50px;
         width: 100%;
         display: flex;
       }
@@ -241,8 +265,19 @@
         height: 500%;
         border-radius: 0;
         background: linear-gradient(#ffe564, #0400ff);
-        animation: animate-rotate 4s linear infinite;
+        animation: animate-rotate 6s linear infinite;
       }
+
+      .classbox:hover:before {
+        content: "";
+        position: absolute;
+        width: 68px;
+        height: 500%;
+        border-radius: 0;
+        background: linear-gradient(#ffe564, #0400ff);
+        animation: animate-rotate 2s linear infinite;
+      }
+
       .classbox::after {
         content: "";
         position: absolute;
@@ -252,6 +287,7 @@
         /* background: #ed09a8; */
         border-radius: 20px;
       }
+
       @keyframes animate-rotate {
         0% {
           transform: rotate(0deg);
@@ -295,7 +331,7 @@
         width: 55%;
       }
       .about .about-content .right .text {
-        font-size: 25px;
+        font-size: 23px;
         font-weight: 600;
         margin-bottom: 10px;
       }
@@ -343,7 +379,7 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding: 40px 0;
+        padding: 0px 0;
         background: #111;
         cursor: pointer;
       }
@@ -992,28 +1028,29 @@
         width: 100%;
         background: black;
         min-height: 100px;
-        padding: 20px 50px;
+        padding: 0px 50px 10px 50px; 
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
       }
-      footer h2 {
-        margin-bottom: 12px;
+      footer p span {
+        /* margin-bottom: 50px; */
         color: #fff;
-        font-size: 2em;
+        font-size: 1.2em;
       }
 
       #media {
         position: relative;
         display: flex;
-        gap: 50px;
+        gap: 10px;
       }
       #media li {
         position: relative;
         list-style: none;
-        width: 80px;
-        height: 80px;
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1055,7 +1092,7 @@
         color: #fff;
         text-align: center;
         margin-top: 15px;
-        font-size: 1.1em;
+        font-size: 1em;
       }
       footer p a {
         text-decoration: none;
@@ -1068,58 +1105,6 @@
         color: rgb(5, 1, 1);
         font-size: 1.2em;
         transform: rotateX(10px);
-      }
-      footer .wave {
-        color: #000;
-        position: absolute;
-        top: -100px;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: url("https://ftl.deekshith.eu.org/354310/None?hash=AgADY7");
-        background-size: 1000px 100px;
-      }
-      footer .wave#wave1 {
-        color: #000;
-        z-index: 1000;
-        opacity: 1;
-        bottom: 0;
-        animation: animatewave 4s linear infinite;
-      }
-      footer .wave#wave2 {
-        color: #000;
-        z-index: 999;
-        opacity: 0.5;
-        bottom: 10px;
-        animation: animatewave_02 4s linear infinite;
-      }
-      footer .wave#wave3 {
-        z-index: 1000;
-        opacity: 0.2;
-        bottom: 15px;
-        animation: animatewave 3s linear infinite;
-      }
-      footer .wave#wave4 {
-        z-index: 999;
-        opacity: 0.7;
-        bottom: 20px;
-        animation: animatewave_02 3s linear infinite;
-      }
-      @keyframes animatewave {
-        0% {
-          background-position-x: 1000px;
-        }
-        100% {
-          background-position-x: 0px;
-        }
-      }
-      @keyframes animatewave_02 {
-        0% {
-          background-position-x: 0px;
-        }
-        100% {
-          background-position-x: 1000px;
-        }
       }
 
       /* pr loader design  */
@@ -1267,7 +1252,7 @@
       }
     </style>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" sizes="48x48" type="image/png" href="logo1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -1293,11 +1278,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-   
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <title>React App</title>
+
+    <title>Deep Lahane | Dev Portfolio</title>
   </head>
   <body>
     <!-- pre loader  -->
@@ -1305,7 +1290,14 @@
     <nav class="navbar">
       <div class="max-width">
         <div class="logo">
-          <a href="#">Hem<span>Bdr.</span></a>
+          <ul>
+            <li>
+              <a class="linkOne"><img src="logo1.png" alt="" /></a>
+            </li>
+            <li>
+              <a href="#" id="logo1" rel="homezz"><span>eep</span></a>
+            </li>
+          </ul>
         </div>
         <ul class="menu">
           <li><a href="#home" class="menu-btn">Home</a></li>
@@ -1322,22 +1314,25 @@
     </nav>
 
     <!-- home section start -->
-    <section class="home" id="home">
-      <div class="max-width">
-        <div class="home-content">
-          <div class="text-1">Hello, my name is</div>
-          <div class="text-2">Deep Lahane</div>
-          <div class="text-3">And I'm a</div>
-          <div class="text-3"><span class="typing"></span></div>
-          <div class="classbox">
-            <a href="mailto:deeplahane15@gmail.com" target="_blank">Hire me</a>
+      <section class="home" id="home">
+        <div class="max-width">
+          <div class="home-content">
+            <div class="text-1">Hello, my name is</div>
+            <div class="text-2">Deep Lahane</div>
+            <div class="text-3">And I'm a</div>
+            <div class="text-3"><span class="typing"></span></div>
+            <div class="classbox">
+              <a href="mailto:deeplahane15@gmail.com" target="_blank"
+                >Hire me</a
+              >
+            </div>
           </div>
+          <!-- <div class="div_margin">
+            <img class="home_img" src="images/home2bg.png" alt="" />
+          </div> -->
         </div>
-        <div class="div_margin">
-          <img class="home_img" src="images/home2bg.png" alt="" />
-        </div>
-      </div>
-    </section>
+      </section>
+    
 
     <!-- about section start -->
     <section class="about" id="about">
@@ -1345,10 +1340,7 @@
         <h2 class="title">About me</h2>
         <div class="about-content">
           <div class="column left">
-            <img
-              src="https://images.pexels.com/photos/2050979/pexels-photo-2050979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="img"
-            />
+            <img style="border: 2px solid crimson" src="myimg3.jpg" alt="img" />
           </div>
           <div class="column right">
             <div class="text">
@@ -1365,7 +1357,7 @@
               job done. Enthusiastic about learning new technologies. I believe
               I have an extremely versatile skill set to do your job.
             </p>
-            <a href="data/Resume.pdf">Download Resume</a>
+            <a href="data/Resume.pdf" target="_blank">Download Resume</a>
           </div>
         </div>
       </div>
@@ -1473,10 +1465,7 @@
               sheets, Bootstrap, Tailwind CSS, JSON, Figma, Git, etc.
               <br />
               Vist my
-              <a
-                href="https://www.linkedin.com/in/deeplahane"
-                target="-blank"
-                id="link"
+              <a href="https://github.com/deeplahane" target="-blank" id="link"
                 >Git profile</a
               >for more details:
             </p>
@@ -1635,7 +1624,7 @@
                 each other.
               </p>
               <a
-                href="https://semperblinds.com/"
+                href="https://github.com/deeplahane/dream-shelter"
                 class="project1"
                 target="_blank"
               >
@@ -1652,7 +1641,7 @@
                 location on the planet with pin-point accuracy using an API.
               </p>
               <a
-                href="https://semperblinds.com/"
+                href="https://github.com/deeplahane/Weather-API-Website"
                 class="project1"
                 target="_blank"
               >
@@ -1669,7 +1658,7 @@
                 to your twitter handle to tweet the quotes of your choice.
               </p>
               <a
-                href="https://semperblinds.com/"
+                href="https://github.com/deeplahane/Twitter-Quotes-API"
                 class="project1"
                 target="_blank"
                 >Source Code</a
@@ -1718,20 +1707,39 @@
           </div>
           <div class="column right">
             <div class="text">Message me</div>
-            <form action="#">
+            <form
+              action="https://formsubmit.co/4610fc236de957be478de1b16d419a79"
+              method="POST"
+            >
               <div class="fields">
                 <div class="field name">
-                  <input type="text" placeholder="Name" required />
+                  <input
+                    type="text"
+                    name="Name"
+                    placeholder="Full Name"
+                    required
+                  />
                 </div>
                 <div class="field email">
-                  <input type="email" placeholder="Email" required />
+                  <input
+                    type="email"
+                    name="Email"
+                    placeholder="Email"
+                    required
+                  />
                 </div>
               </div>
               <div class="field">
-                <input type="text" placeholder="Subject" required />
+                <input
+                  type="text"
+                  name="Subject"
+                  placeholder="Subject"
+                  required
+                />
               </div>
               <div class="field textarea">
                 <textarea
+                  name="Message"
                   cols="30"
                   rows="10"
                   placeholder="Message.."
@@ -1750,16 +1758,10 @@
     <!-- footer section start -->
 
     <footer>
-      <div class="waves">
-        <div class="wave" id="wave1"></div>
-        <div class="wave" id="wave2"></div>
-        <div class="wave" id="wave3"></div>
-        <!-- <div class="wave" id="wave4"></div> -->
-      </div>
-      <h2><span class="typing-3"></span></h2>
+      <p><span class="typing-3"></span></p>
       <ul id="media">
         <!-- github  -->
-        <li style="--clr: #000000">
+        <li style="--clr: #eeeeee">
           <a href="https://github.com/deeplahane" target="-blank"
             ><i class="fa-brands fa-github"></i>
           </a>
@@ -1773,7 +1775,10 @@
         <!-- Fiverr  -->
         <li style="--clr: #3cc700">
           <a href="https://www.fiverr.com/deep_lahane" target="-blank">
-            <img style="height: 37px; width: 37px; padding-bottom: 0px;" src="fiverr_icon.png" />
+            <img
+              style="height: 30px; width: 30px;"
+              src="fiverr_icon.png"
+            />
           </a>
         </li>
         <!-- Instagram  -->
@@ -1784,12 +1789,14 @@
         </li>
         <!-- E-mail  -->
         <li style="--clr: #ffffff">
-          <a href="mailto:deeplahane15@gmail.com" target="-blank"><i class="fas fa-envelope"></i></a>
+          <a href="mailto:deeplahane15@gmail.com" target="-blank"
+            ><i class="fas fa-envelope"></i
+          ></a>
         </li>
         <!-- twitter -->
         <li style="--clr: #00d8ff">
           <a href="https://twitter.com/LahaneDeep" target="-blank"
-            ><i class="fa-brands fa-twitter "></i
+            ><i class="fa-brands fa-twitter"></i
           ></a>
         </li>
       </ul>
@@ -1869,7 +1876,7 @@
           strings: [
             "Web Developer",
             "Full-Stack Developer",
-            "student",
+            "Student",
             "Freelancer",
             "Website Designer",
             "Fresher",
@@ -1889,7 +1896,7 @@
           strings: [
             "Web Developer",
             "Full-Stack Developer",
-            "student",
+            "Student",
             "Freelancer",
             "Website Designer",
             "Fresher",
