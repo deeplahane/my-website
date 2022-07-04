@@ -139,7 +139,7 @@
       }
 
       .navbar.sticky .menu li a:hover {
-        color: crimson;
+        /* color: crimson; */
         cursor: pointer;
         text-decoration: underline;
         text-underline-offset: 8px;
@@ -222,18 +222,26 @@
         font-family: "Ubuntu", sans-serif;
       }
       .home .max-width {
-        margin-top: 50px;
+        /* margin-top: 25px; */
         width: 100%;
         display: flex;
       }
       .home .max-width .row {
         margin-right: 0;
       }
+
+      .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
       .home .home-content .text-1 {
-        font-size: 20px;
+        font-size: 25px;
       }
       .home .home-content .text-2 {
-        font-size: 70px;
+        font-size: 65px;
         font-weight: 600;
         margin-left: -3px;
       }
@@ -304,14 +312,16 @@
         cursor: pointer;
       }
 
-      .home .div_margin {
-        margin-right: 0%;
+      .home .div_margin .home_img {
+        margin-top: 25px;
+        height: 450px;
+        width: 450px;
       }
 
-      .home .div_margin .home_img {
-        margin-left: 116px;
-        height: 500px;
-        width: 500px;
+      .spacing_divs {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
       }
 
       /* about section styling */
@@ -833,12 +843,20 @@
         background: #222;
         border-radius: 6px;
         padding: 25px 35px;
+        position: relative;
+        /* flex-direction: column;  */
         text-align: center;
+        align-items: st;
+        justify-content: space-evenly;
         overflow: hidden;
         transition: all 0.3s ease;
+        display: flex;
+        flex-wrap: wrap;
+        
       }
 
       .teams .carousel .card .box {
+        position: block;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -915,13 +933,6 @@
         color: white;
         background: crimson;
       }
-
-      .apply_flex {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-      }
-
       /* contact section styling */
       input,
       textarea {
@@ -1028,7 +1039,7 @@
         width: 100%;
         background: black;
         min-height: 100px;
-        padding: 0px 50px 10px 50px; 
+        padding: 0px 50px 10px 50px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1043,12 +1054,17 @@
       #media {
         position: relative;
         display: flex;
-        gap: 10px;
+        gap: 2rem;
+      }
+      @media screen and (max-width: 500px) {
+        #media {
+          gap: 1rem;
+        }
       }
       #media li {
         position: relative;
         list-style: none;
-        width: 40px;
+        width: max-content;
         height: 40px;
         margin-top: 10px;
         display: flex;
@@ -1109,7 +1125,16 @@
 
       /* pr loader design  */
       #preloader {
-        background: url("/my-website/public/images/img1.png") no-repeat center;
+        background: rgb(14, 21, 56);
+        background: linear-gradient(
+          90deg,
+          rgba(14, 21, 56, 1) 0%,
+          rgba(19, 29, 76, 1) 25%,
+          rgba(26, 39, 102, 1) 50%,
+          rgba(35, 51, 136, 1) 75%,
+          rgba(44, 67, 179, 1) 100%
+        );
+        /* background:  no-repeat center; */
         background-size: 15%;
         filter: invert(100%);
         background-color: #fff;
@@ -1250,6 +1275,31 @@
           line-height: 38px;
         }
       }
+
+      @media screen and (max-width: 992px) {
+        .div_margin .home_img {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        .teams .carousel .card {
+          height: 450px;
+        }
+      }
+      @media screen and (max-width: 1080px) {
+        .teams .carousel .card {
+          height: 450px;
+          width: 300px;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        .teams .carousel .card {
+          height: 460px;
+          /* width: 300px; */
+        }
+      } 
+
     </style>
     <meta charset="utf-8" />
     <link rel="icon" sizes="48x48" type="image/png" href="logo1.png" />
@@ -1314,25 +1364,22 @@
     </nav>
 
     <!-- home section start -->
-      <section class="home" id="home">
-        <div class="max-width">
-          <div class="home-content">
-            <div class="text-1">Hello, my name is</div>
-            <div class="text-2">Deep Lahane</div>
-            <div class="text-3">And I'm a</div>
-            <div class="text-3"><span class="typing"></span></div>
-            <div class="classbox">
-              <a href="mailto:deeplahane15@gmail.com" target="_blank"
-                >Hire me</a
-              >
-            </div>
+    <section class="home" id="home">
+      <div class="max-width spacing_divs">
+        <div class="home-content">
+          <div class="text-1">Hello, my name is</div>
+          <div class="text-2">Deep Lahane</div>
+          <div class="text-3">And I'm a</div>
+          <div class="text-3"><span class="typing"></span></div>
+          <div class="classbox">
+            <a href="mailto:deeplahane15@gmail.com" target="_blank">Hire me</a>
           </div>
-          <!-- <div class="div_margin">
-            <img class="home_img" src="images/home2bg.png" alt="" />
-          </div> -->
         </div>
-      </section>
-    
+        <div class="div_margin">
+          <img class="home_img" src="images/home2bg.png" alt="" />
+        </div>
+      </div>
+    </section>
 
     <!-- about section start -->
     <section class="about" id="about">
@@ -1551,7 +1598,7 @@
     <section class="teams" id="teams">
       <div class="max-width">
         <h2 class="title">My Projects</h2>
-        <div class="carousel owl-carousel">
+        <div class="carousel owl-carousel strech_class">
           <div class="card">
             <div class="box">
               <img src="images/project images/project_img1.jpg" />
@@ -1620,8 +1667,7 @@
               <div class="text">DREAM SHELTER</div>
               <p>
                 It is a social media platform for all the Abroad-Studing
-                Aspirants to engage with each other an form a comunity to help
-                each other.
+                Aspirants to engage with each other an form a comunity.
               </p>
               <a
                 href="https://github.com/deeplahane/dream-shelter"
@@ -1652,7 +1698,7 @@
           <div class="card">
             <div class="box">
               <img src="images/project images/project_img6.jpg" />
-              <div class="text">QUOTES GERERATIOR</div>
+              <div class="text">GENERATE QUOTE</div>
               <p>
                 This website fetches random quotes from an API and redirects you
                 to your twitter handle to tweet the quotes of your choice.
@@ -1775,10 +1821,7 @@
         <!-- Fiverr  -->
         <li style="--clr: #3cc700">
           <a href="https://www.fiverr.com/deep_lahane" target="-blank">
-            <img
-              style="height: 30px; width: 30px;"
-              src="fiverr_icon.png"
-            />
+            <img style="height: 30px; width: 30px" src="fiverr_icon.png" />
           </a>
         </li>
         <!-- Instagram  -->
@@ -1875,10 +1918,10 @@
         var typed = new Typed(".typing", {
           strings: [
             "Web Developer",
-            "Full-Stack Developer",
+            "Full-Stack Dev.",
             "Student",
             "Freelancer",
-            "Website Designer",
+            "Web Designer",
             "Fresher",
           ],
           typeSpeed: 100,
