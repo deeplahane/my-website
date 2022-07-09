@@ -89,6 +89,10 @@
         transform: translateX(-50%);
       }
 
+      #contact,#skills,#teams,#services,#about{
+        scroll-margin-top: 30px ;
+      }
+
       /* navbar styling */
       .navbar {
         position: fixed;
@@ -936,6 +940,8 @@
       }
 
       .teams .carousel .card .apply_flex{
+        position: absolute;
+        bottom: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1301,13 +1307,19 @@
         font-weight: 500;
         margin: 10px 0 7px 0;
       }
+      /* @media screen and (max-width: 1080px) {
+        .teams .carousel .card .text1 {
+        font-size: 19px;
+        font-weight: 500;
+        margin: 10px 0 7px 0;
+      } */
       }
-      /* @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1000px) {
         .teams .carousel .card {
           height: 460px;
           width: 300px;
         }
-      }  */
+      } 
 
     </style>
     <meta charset="utf-8" />
@@ -1396,7 +1408,7 @@
         <h2 class="title">About me</h2>
         <div class="about-content">
           <div class="column left">
-            <img style="border: 2px solid crimson" src="myimg3.jpg" alt="img" />
+            <img style="border: 2px solid crimson" src="myimg2.jpg" alt="img" />
           </div>
           <div class="column right">
             <div class="text">
@@ -1614,7 +1626,7 @@
               <div class="text">TESTIMONIALS API</div>
               <p>
                 Tired of copy and pasting lorem user's testimonial text which
-                doesn't give the feel of authenticity try testimonial API.
+                doesn't give the feel of authenticity try API.
               </p>
             </div>
             <div class="apply_flex">
@@ -1637,7 +1649,7 @@
               <div class="text">EXPENSE TRACKER</div>
               <p>
                 This projects conatains 3 sections Personal, Business, Room
-                rents. This project also having a user authentiation.
+                rents.
               </p>
             </div>
             <div class="apply_flex">
@@ -1664,7 +1676,7 @@
               </p>
               <a
                 href="https://semperblinds.com/"
-                class="project"
+                class="project apply_flex"
                 target="_blank"
                 >Live preview</a
               >
