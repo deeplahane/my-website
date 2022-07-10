@@ -59,6 +59,7 @@
         align-items: center;
         justify-content: space-between;
       }
+
       section .title {
         position: relative;
         text-align: center;
@@ -89,8 +90,12 @@
         transform: translateX(-50%);
       }
 
-      #contact,#skills,#teams,#services,#about{
-        scroll-margin-top: 30px ;
+      #contact,
+      #skills,
+      #teams,
+      #services,
+      #about {
+        scroll-margin-top: 30px;
       }
 
       /* navbar styling */
@@ -229,6 +234,8 @@
         /* margin-top: 25px; */
         width: 100%;
         display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .home .max-width .row {
         margin-right: 0;
@@ -333,7 +340,10 @@
         content: "who I am";
       }
       .about .about-content .left {
-        width: 45%;
+        display: flex;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
       }
       .about .about-content .left img {
         height: 400px;
@@ -342,7 +352,7 @@
         border-radius: 6px;
       }
       .about .about-content .right {
-        width: 55%;
+        width: 50%;
       }
       .about .about-content .right .text {
         font-size: 23px;
@@ -370,6 +380,15 @@
       .about .about-content .right a:hover {
         color: white;
         background: crimson;
+      }
+
+      @media screen and (max-width: 355px) {
+        .about .about-content .right a {
+          font-size: 15px;
+          font-weight: 500;
+          padding: 10px 30px;
+          border-radius: 6px;
+        }
       }
 
       /* services section styling */
@@ -766,7 +785,7 @@
         font-size: 18px;
         font-weight: 500;
         padding: 8px 16px;
-        margin-top: 20px;
+        margin-top: 10px;
         border-radius: 6px;
         border: 2px solid crimson;
         transition: 0.3s ease-in-out;
@@ -856,7 +875,6 @@
         transition: all 0.3s ease;
         display: flex;
         flex-wrap: wrap;
-        
       }
 
       .teams .carousel .card .box {
@@ -872,7 +890,9 @@
         font-size: 25px;
         font-weight: 500;
         margin: 10px 0 7px 0;
+        color: crimson;
       }
+
       .teams .carousel .card img {
         height: 150px;
         width: 150px;
@@ -939,12 +959,18 @@
         background: crimson;
       }
 
-      .teams .carousel .card .apply_flex{
-        position: absolute;
-        bottom: 10px;
+      .line-clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .teams .carousel .card .apply_flex {
+        /* position: absolute; */
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-direction: row;
       }
       /* contact section styling */
@@ -1137,6 +1163,15 @@
         transform: rotateX(10px);
       }
 
+      #pre_loader{
+        background: black url("images/spinner.gif") no-repeat center center; 
+        height: 100vh;
+        background-size: 10%;
+        width: 100%;
+        z-index: 100;
+        position:fixed;
+      }
+
       /* pr loader design  */
       #preloader {
         background: rgb(14, 21, 56);
@@ -1160,10 +1195,34 @@
         /* border-radius: 12px; */
       }
       /* responsive media query start */
-      @media (max-width: 1104px) {
-        .about .about-content .left img {
+
+      @media (max-width: 1040px) {
+        .home .div_margin .home_img {
+          margin-top: 75px;
+          height: 400px;
+          width: 400px;
+        }
+      }
+
+      @media (max-width: 946px) {
+        .home .div_margin .home_img {
+          margin-top: 30px;
+          height: 400px;
+          width: 400px;
+        }
+      }
+
+      @media (max-width: 828px) {
+        .home .div_margin .home_img {
+          margin-top: 50px;
           height: 350px;
           width: 350px;
+        }
+      }
+
+      @media screen and (max-width: 778px) {
+        .div_margin .home_img {
+          display: none;
         }
       }
 
@@ -1202,15 +1261,25 @@
           margin: 20px 0;
           font-size: 25px;
         }
+
+        .home .home-content .text-1 {
+          font-size: 25px;
+        }
+
         .home .home-content .text-2 {
-          font-size: 70px;
+          font-size: 50px;
         }
         .home .home-content .text-3 {
-          font-size: 35px;
+          font-size: 30px;
         }
         .home .home-content a {
-          font-size: 23px;
+          font-size: 18px;
           padding: 10px 30px;
+        }
+
+        .classbox {
+          width: 140px;
+          height: 70px;
         }
         .max-width {
           max-width: 930px;
@@ -1237,35 +1306,33 @@
         }
       }
 
-      @media (max-width: 690px) {
-        .max-width {
-          padding: 0 23px;
-        }
-        .home .home-content .text-2 {
-          font-size: 50px;
-        }
-        .home .home-content .text-3 {
-          font-size: 32px;
-        }
-        .home .home-content a {
-          font-size: 20px;
-        }
-        .classbox {
-          width: 153px;
-          height: 88px;
-        }
-        .services .serv-content .card {
-          width: 100%;
+      @media screen and (max-width: 778px) {
+        .home-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
       }
 
       @media (max-width: 500px) {
+        .home .home-content .text-1 {
+          font-size: 20px;
+        }
         .home .home-content .text-2 {
-          font-size: 50px;
+          font-size: 40px;
         }
         .home .home-content .text-3 {
-          font-size: 27px;
+          font-size: 20px;
         }
+
+        .about .about-content .left img {
+          height: 255px;
+          width: 255px;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+
         .about .about-content .right .text,
         .skills .skills-content .left .text {
           font-size: 19px;
@@ -1290,36 +1357,65 @@
         }
       }
 
-      @media screen and (max-width: 992px) {
-        .div_margin .home_img {
-          display: none;
+      @media (max-width: 362px) {
+        .classbox {
+          margin-top: 35px;
+        }
+
+        .home-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .home .home-content .text-1 {
+          font-size: 18px;
+        }
+        .home .home-content .text-2 {
+          margin-top: 5px;
+          font-size: 30px;
+        }
+        .home .home-content .text-3 {
+          margin-top: 5px;
+          font-size: 18px;
         }
       }
 
-      @media screen and (max-width: 1200px) {
-        .teams .carousel .card {
-          height: 440px;
+      @media screen and (max-width: 385px) {
+        .services .title::after,
+        .teams .title::after {
+          font-size: 17px;
         }
       }
+
+      @media screen and (max-width: 1102px) and (min-width: 1000px) {
+        .teams .carousel .card {
+          height: 400px;
+        }
+      }
+
+      @media screen and (max-width: 700px) and (min-width: 600px) {
+        .teams .carousel .card {
+          height: 400px;
+        }
+      }
+
       @media screen and (max-width: 1070px) {
-        .teams .carousel .card .text {
-        font-size: 20px;
-        font-weight: 500;
-        margin: 10px 0 7px 0;
-      }
-      /* @media screen and (max-width: 1080px) {
-        .teams .carousel .card .text1 {
-        font-size: 19px;
-        font-weight: 500;
-        margin: 10px 0 7px 0;
-      } */
-      }
-      @media screen and (max-width: 1000px) {
-        .teams .carousel .card {
-          height: 460px;
-          width: 300px;
+        .teams .carousel .card .box div {
+          font-size: 20px;
+          font-weight: 500;
+          /* margin: 10px 0 7px 0; */
         }
-      } 
+      }
+
+      @media screen and (max-width: 1070px) {
+        .teams .carousel .card .box p {
+          font-size: 15px;
+          font-weight: 0;
+          /* margin: 10px 0 7px 0; */
+        }
+      }
+
 
     </style>
     <meta charset="utf-8" />
@@ -1351,11 +1447,10 @@
     />
     <link rel="icon" href="%PUBLIC_URL%/logo.png" />
 
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
     <title>Deep Lahane | Dev Portfolio</title>
   </head>
   <body>
+    <!-- <div id="pre_loader"></div> -->
     <!-- pre loader  -->
     <div id="preloader"></div>
     <nav class="navbar">
@@ -1408,7 +1503,12 @@
         <h2 class="title">About me</h2>
         <div class="about-content">
           <div class="column left">
-            <img style="border: 2px solid crimson" src="myimg2.jpg" alt="img" />
+            <img
+              class="img_height"
+              style="border: 2px solid crimson"
+              src="myimg2.jpg"
+              alt="img"
+            />
           </div>
           <div class="column right">
             <div class="text">
@@ -1619,14 +1719,14 @@
     <section class="teams" id="teams">
       <div class="max-width">
         <h2 class="title">My Projects</h2>
-        <div class="carousel owl-carousel strech_class">
+        <div class="carousel owl-carousel">
           <div class="card">
             <div class="box">
               <img src="images/project images/project_img1.jpg" />
               <div class="text">TESTIMONIALS API</div>
-              <p>
+              <p class="line-clamp">
                 Tired of copy and pasting lorem user's testimonial text which
-                doesn't give the feel of authenticity try API.
+                doesn't give the feel of authenticity try our API.
               </p>
             </div>
             <div class="apply_flex">
@@ -1646,10 +1746,10 @@
           <div class="card">
             <div class="box">
               <img src="images/project images/project_img3.png" />
-              <div class="text">EXPENSE TRACKER</div>
-              <p>
+              <div class="text">TRACK EXPENSE</div>
+              <p class="line-clamp">
                 This projects conatains 3 sections Personal, Business, Room
-                rents.
+                rents. It also contains a sign-up, login page.
               </p>
             </div>
             <div class="apply_flex">
@@ -1670,13 +1770,13 @@
             <div class="box">
               <img src="images/project images/project_img2.png" />
               <div class="text">SEMPER BLINDS</div>
-              <p>
+              <p class="line-clamp">
                 Semper Blinds based basically a blinds store based in North East
                 Manchester having over 35 years of experience.
               </p>
               <a
                 href="https://semperblinds.com/"
-                class="project apply_flex"
+                class="project"
                 target="_blank"
                 >Live preview</a
               >
@@ -1686,7 +1786,7 @@
             <div class="box">
               <img src="images/project images/project_img4.jpg" />
               <div class="text">DREAM SHELTER</div>
-              <p>
+              <p class="line-clamp">
                 It is a social media platform for all the Abroad-Studing
                 Aspirants to engage with each other an form a comunity.
               </p>
@@ -1703,7 +1803,7 @@
             <div class="box">
               <img src="images/project images/project_img5.jpg" />
               <div class="text">WEATHER STATUS</div>
-              <p>
+              <p class="line-clamp">
                 It is a website which gives all weather information about any
                 location on the planet with pin-point accuracy using an API.
               </p>
@@ -1720,7 +1820,7 @@
             <div class="box">
               <img src="images/project images/project_img6.jpg" />
               <div class="text">GENERATE QUOTE</div>
-              <p>
+              <p class="line-clamp">
                 This website fetches random quotes from an API and redirects you
                 to your twitter handle to tweet the quotes of your choice.
               </p>
@@ -1873,25 +1973,14 @@
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
+    >
+    </script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="script.js"></script>
-    <!-- scroll bar js  -->
-    <script type="text/javascript">
-      var preogressbar = document.getElementById("preogressbar");
-      var percent = document.getElementById("percent");
-
-      var totalHeight = document.body.scrollHeight - window.innerHeight;
-      window.onscroll = function () {
-        var progress = (window.pageYOffset / totalHeight) * 100;
-        preogressbar.style.height = progress + "%";
-        percent.innerHTML = "Page Scrolled " + Math.round(progress) + "%";
-      };
+    >
     </script>
-    <!-- pre loader js  -->
+    <script src="script.js"></script>
     <script>
       var loader = document.getElementById("preloader");
 
@@ -1899,6 +1988,25 @@
         loader.style.display = "none";
       });
     </script>
+    <!-- scroll bar js  -->
+    <!-- <script type="text/javascript">
+      var progressbar = document.getElementById("progressbar");
+      var percent = document.getElementById("percent");
+
+      var totalHeight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function () {
+        var progress = (window.pageYOffset / totalHeight) * 100;
+        progressbar.style.height = progress + "100%";
+        percent.innerHTML = "Page Scrolled " + Math.round(progress) + "100%";
+      };
+    </script> -->
+   
+    <!-- <script>
+      var loader = getElementById("pre_loader");
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script> -->
     <script>
       $(document).ready(function () {
         $(window).scroll(function () {
